@@ -1,0 +1,10 @@
+<launch>
+    <arg name="video_path" default="~/videos/video1.mp4" />
+    <arg name="bag_name" default="video1.bag" />
+
+    <node pkg="normal_function" name="video2bag" type="video2bag.py" output="screen" clear_params="true">
+        <param name="path" value="$(arg video_path)" />
+        <param name="bag" value="$(arg bag_name)" />
+    </node>
+
+</launch>
